@@ -1,0 +1,31 @@
+{
+  "name": "boot-shadow",
+  "version": "1.0.0",
+  "description": "jquery plugins,boot-shadow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueskyawen/boot-shadow.git"
+  },
+  "keywords": [
+    "jquery",
+    "plugins"
+  ],
+  "author": "blueskyawen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blueskyawen/boot-shadow/issues"
+  },
+  "homepage": "https://github.com/blueskyawen/boot-shadow#readme",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1"
+  }
+}

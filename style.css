@@ -1,0 +1,21 @@
+.navbar .container-fluid {
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.navbar .container-fluid .navbar-brand {
+    font-size:30px;
+}
+#collapsibleNavbar .navbar-nav li a {
+    font-size:18px;
+}
+#collapsibleNavbar .navbar-nav li.active a{
+    color:#3385ff;
+    font-weight: 800;
+    border-color:#3385ff;
+}
+#collapsibleNavbar .navbar-nav li.active a:active {
+    color: #ffffff;
+}
+.container-fluid.content-body {
+    padding:15px 50px;
+}

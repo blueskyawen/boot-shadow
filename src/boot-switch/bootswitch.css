@@ -1,0 +1,84 @@
+.text {
+    margin-left:30px;
+    height:30px;
+    display:inline-flex;
+    align-items:center;
+    position:relative;
+    bottom:10px;
+}
+.nc-switch{
+    display:inline-flex;
+    border:none;
+    padding:1px;
+    margin: 5px;
+    align-items:center;
+}
+.nc-switch.nc-switch-start{
+    justify-content: flex-start;
+    background:#b3b3b3;
+}
+.nc-switch.nc-switch-end{
+    justify-content: flex-end;
+    background:#1a8cff;
+}
+.nc-switch .swicth-title {
+    display:inline-block;
+    height:100%;
+    margin:auto;
+}
+.nc-switch:hover{
+    cursor:pointer;
+}
+.nc-switch .switch{
+    border-radius:50%;
+    border:none;
+    background:#f2f2f2;
+}
+.nc-switch.nc-switch-row{
+    flex-direction: row;
+    background:#b3b3b3;
+}
+.nc-switch.nc-switch-reverse{
+    flex-direction: row-reverse;
+    background:#1a8cff;
+}
+.nc-switch.switch-big {
+    height:50px;
+    width:100px;
+    border-radius:25px;
+}
+.switch-big .swicth-title {
+    line-height:50px;
+    font-size:24px;
+}
+.switch-big .switch {
+    width:48px;
+    height:48px;
+}
+.nc-switch.switch-normal {
+    height:30px;
+    width:60px;
+    border-radius:15px;
+}
+.switch-normal .swicth-title {
+    line-height:30px;
+    font-size:16px;
+}
+.switch-normal .switch {
+    width:28px;
+    height:28px;
+}
+.nc-switch.switch-small {
+    height:20px;
+    width:40px;
+    border-radius:10px;
+}
+.switch-small .swicth-title {
+    line-height:20px;
+    font-size:12px;
+}
+.switch-small .switch {
+    width:18px;
+    height:18px;
+}
+
