@@ -3,3 +3,4 @@
  */
 require('./boot-switch/bootswitch');
 require('./boot-select/bootselect');
+require('./boot-mutil-select/bootmutilselect');
