@@ -10,7 +10,7 @@
 
 # 文档
 
-[http://www.blueskyawen.com/boot-shadow](http://www.blueskyawen.com/boot-shadow)
+[http://blueskyawen.com/boot-shadow/](http://blueskyawen.com/boot-shadow/)
 
 # 支持环境
 
