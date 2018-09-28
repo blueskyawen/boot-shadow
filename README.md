@@ -8,6 +8,10 @@
 - 引用脚本后直接使用
 - 常用插件，使用方式多样
 
+# 文档
+
+[http://www.blueskyawen.com/boot-shadow](http://www.blueskyawen.com/boot-shadow)
+
 # 支持环境
 
 现代浏览器和 IE9 及以上（需要 polyfills）
