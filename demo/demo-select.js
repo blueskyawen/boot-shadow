@@ -12,13 +12,16 @@ $(function() {
     $("#select-normal").bootSelect({options: options1,
         defalutChecked: '',
         placeholder: '请选择'});
+    $("#select-normal-2").bootSelect({options: options1,
+        defalutChecked: 'Iaas',
+        placeholder: '请选择'});
     $("#select-disable").bootSelect({options: options1,
         defalutChecked: 'Paas',
         placeholder: '请选择',
         disable: true});
     $("#select-small-1").bootSelect({options: options1,
         defalutChecked: '',
-        placeholder: '请选择',
+        placeholder: 'select',
         width: 220});
     $("#select-small-2").bootSelect({options: options1,
         defalutChecked: '',

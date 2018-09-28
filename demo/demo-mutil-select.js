@@ -62,7 +62,6 @@ $(function() {
         disable: [],
         checkbox:true,
         width: 620});
-    $("#temple").text(JSON.stringify($("#mutil-select01").bootMultilSelect('getSelection')));
     $("#mutil-select01").on("change.bc.multilselect",function() {
         $(this).next("p").text(JSON.stringify($(this).bootMultilSelect('getSelection')));
     });

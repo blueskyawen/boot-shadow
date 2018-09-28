@@ -1,0 +1,255 @@
+<h1>mutil-select下拉选择器</h1>
+<p class="lead">多选下拉选择器</p>
+<h3 class="font-weight-bold hh3">- 何时使用</h3>
+<ul>
+    <li>弹出一个下拉选择操作，用于代替原生的多选下拉框</li>
+</ul>
+<h3 class="font-weight-bold hh3">- 示例</h3>
+<h5 class="hh5">默认多选下拉选择框</h5>
+<div class="card">
+    <div class="card-body">
+        <div id="mutil-select01"></div>
+        <p style="margin-left:20px;" id="temple"></p>
+        <div id="mutil-select02"></div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo7">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo7" class="collapse">
+    <textarea style="height:400px;">
+    <div id="mutil-select01"></div>
+    <div id="mutil-select02"></div>
+
+    $(function() {
+        var optionsss = [
+            {value: 'paletxUI-paletxUI-paletxUI-paletxUI-paletxUI-paletxUI-paletxUI-paletxUI',name: 'paletxUI-paletxUI-paletxUI-paletxUI-paletxUI-paletxUI-paletxUI-paletxUI'},
+            {value: 'Paas-Paas',name: 'Paas-Paas'},
+            {value: 'Iaas-Iaas',name: 'Iaas-Iaas'},
+            {value: 'Saas-Saas',name: 'Saas-Saas'},
+            {value: 'CMS-CMS',name: 'CMS-CMS'}
+        ];
+        var disableOptions = [
+            {value: 'CMS-CMS',name: 'CMS-CMS'}
+        ];
+        $("#mutil-select01").bootMultilSelect({options: optionsss,
+                                                defalutSelected: defaultSelects1,
+                                                disable: disableOptions});
+        $("#mutil-select02").bootMultilSelect({options: optionsss,
+                                                defalutSelected: defaultSelects1,
+                                                disable: disableOptions,
+                                                disabled:true});
+        $("#mutil-select01").on("change.bc.multilselect",function() {
+            $(this).next("p").text(JSON.stringify($(this).bootMultilSelect('getSelection')));
+        });
+    });
+    </textarea>
+</div>
+<h5 class="hh5">带复选框的下拉选择</h5>
+<div class="card">
+    <div class="card-body">
+        <div id="mutil-select03"></div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo8">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo8" class="collapse">
+    <textarea style="height:200px;">
+    <div id="mutil-select03"></div>
+
+    $(function() {
+        $("#mutil-select").bootMultilSelect({options: optionsss,
+                                            defalutSelected: defaultSelects2,
+                                            disable: disableOptions,
+                                            checkbox:true});
+    });
+    </textarea>
+</div>
+<h5 class="hh5">带全选的下拉选择</h5>
+<div class="card">
+    <div class="card-body">
+        <div id="mutil-select04"></div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo9">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo9" class="collapse">
+    <textarea style="height:200px;">
+    <div id="mutil-select04"></div>
+
+    $(function() {
+        $("#mutil-select04").bootMultilSelect({options: optionsss,
+                                            defalutSelected: defaultSelects2,
+                                            disable: disableOptions,
+                                            checkbox:true,
+                                            allcheck:true});
+    });
+    </textarea>
+</div>
+<h5 class="hh5">显示选择个数的下拉选择</h5>
+<div class="card">
+    <div class="card-body">
+        <div id="mutil-select05"></div>
+        <div id="mutil-select06"></div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo10">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo10" class="collapse">
+    <textarea style="height:200px;">
+    <div id="mutil-select05"></div>
+    <div id="mutil-select06"></div>
+
+    $(function() {
+        $("#mutil-select05").bootMultilSelect({options: optionsss,
+                                                defalutSelected: defaultSelects2,
+                                                disable: [],
+                                                checkbox:true,
+                                                allcheck:true,
+                                                showNum:true});
+        $("#mutil-select06").bootMultilSelect({options: optionsss,
+                                                defalutSelected: defaultSelects2,
+                                                disable: [],
+                                                showNum:true});
+    });
+    </textarea>
+</div>
+<h5 class="hh5">自定义尺寸</h5>
+<div class="card">
+    <div class="card-body">
+        <div id="mutil-small"></div>
+        <div id="mutil-big"></div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo11">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo11" class="collapse">
+    <textarea style="height:200px;">
+    <div id="mutil-small"></div>
+    <div id="mutil-big"></div>
+
+    $(function() {
+        $("#mutil-small").bootMultilSelect({options: optionsss,
+                                        defalutSelected: defaultSelects,
+                                        disable: [],
+                                        width: 220});
+        $("#mutil-big").bootMultilSelect({options: optionsss,
+                                        defalutSelected: defaultSelects2,
+                                        disable: [],
+                                        checkbox:true,
+                                        width: 620});
+    });
+    </textarea>
+</div>
+
+
+<h3 class="font-weight-bold hh3">- 参数</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>options</td>
+        <td>下拉项目数组</td>
+        <td>Array</td>
+        <td>[]</td>
+    </tr>
+    <tr>
+        <td>defalutSelected</td>
+        <td>默认选择的项目</td>
+        <td>Array</td>
+        <td>[]</td>
+    </tr>
+    <tr>
+        <td>disable</td>
+        <td>默认禁止的项目</td>
+        <td>Array</td>
+        <td>[]</td>
+    </tr>
+    <tr>
+        <td>disabled</td>
+        <td>是否禁止下拉选择</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>checkbox</td>
+        <td>是否携带复选框</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>allcheck</td>
+        <td>是否携带全选框</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>下拉框宽度</td>
+        <td>Number</td>
+        <td>420</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 方法</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>方法</th>
+        <th>说明</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>bootMultilSelect(Option)</td>
+        <td>接收一个可选的对象，初始化插件</td>
+        <td>Object</td>
+    </tr>
+    <tr>
+        <td>bootMultilSelect('getSelection')</td>
+        <td>获取已选择的项目数据列表</td>
+        <td>-</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 事件</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>事件</th>
+        <th>说明</th>
+        <th>实例</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>change.bc.multilselect</td>
+        <td>选择项变更时触发</td>
+        <td>$("#mutilselect").on("change.bc.multilselect",() => {});</td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="./demo/demo-mutil-select.js"></script>
