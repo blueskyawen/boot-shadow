@@ -1,0 +1,134 @@
+<h1>Info通知框</h1>
+<p class="lead">通知提醒框</p>
+<h3 class="font-weight-bold hh3">- 何时使用</h3>
+<ul>
+    <li>用户操作的通知内容，或交互后的结果</li>
+</ul>
+<h3 class="font-weight-bold hh3">- 示例</h3>
+<div class="card">
+    <div class="card-body">
+        <div id="success"></div>
+        <div id="error"></div>
+        <div id="warn"></div>
+
+        <button id="info-success" class="btn btn-success">成功通知</button>
+        <button id="info-warn" class="btn btn-warning">警告通知</button>
+        <button id="info-error" class="btn btn-danger">错误通知</button>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo15">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo15" class="collapse">
+    <textarea style="height:400px;">
+    <div id="success"></div>
+    <div id="error"></div>
+    <div id="warn"></div>
+
+    $(function() {
+        var $successInfo = $("#success").bootInfo({type: 'success',
+                                                    title: '操作成功,2s后自动消失',
+                                                    timelen: 2000});
+        var $warnInfo = $("#warn").bootInfo({type: 'warn',
+                                            title: '我是警告消息!'});
+        var $errorInfo = $("#error").bootInfo({type: 'error',
+                                            title: '我是错误消息!'});
+
+        $("#info-success").click(function() {
+            $successInfo.bootInfo('show');
+        });
+        $("#info-warn").click(function() {
+            $warnInfo.bootInfo('show');
+        });
+        $("#info-error").click(function() {
+            $errorInfo.bootInfo('show');
+        });
+    });
+    </textarea>
+</div>
+
+<h3 class="font-weight-bold hh3">- 参数</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>type</td>
+        <td>提示框类型</td>
+        <td>String;success/warn/error</td>
+        <td>success</td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>提示框文本</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>timelen</td>
+        <td>提示框消失时长</td>
+        <td>Number</td>
+        <td>2000</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 方法</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>方法</th>
+        <th>说明</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>bootInfo(Option)</td>
+        <td>接收一个可选的对象，初始化插件</td>
+        <td>Object</td>
+    </tr>
+    <tr>
+        <td>bootInfo('show')</td>
+        <td>显示通知</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>bootInfo('hide')</td>
+        <td>隐藏通知</td>
+        <td>-</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 事件</h3>
+<p>无</p>
+
+<script>
+    $(function() {
+        var $successInfo = $("#success").bootInfo({type: 'success',
+            title: '操作成功,2s后自动消失',
+            timelen: 2000});
+        var $warnInfo = $("#warn").bootInfo({type: 'warn',
+            title: '我是警告消息!'});
+        var $errorInfo = $("#error").bootInfo({type: 'error',
+            title: '我是错误消息!'});
+
+
+        $("#info-success").click(function() {
+            $successInfo.bootInfo('show');
+        });
+        $("#info-warn").click(function() {
+            $warnInfo.bootInfo('show');
+        });
+        $("#info-error").click(function() {
+            $errorInfo.bootInfo('show');
+        });
+    });
+</script>

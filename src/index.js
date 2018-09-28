@@ -4,3 +4,5 @@
 require('./boot-switch/bootswitch');
 require('./boot-select/bootselect');
 require('./boot-mutil-select/bootmutilselect');
+require('./boot-transfer/boottransfer');
+require('./boot-info/bootinfo');

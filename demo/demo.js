@@ -16,4 +16,6 @@ $(function() {
     $("#switch").load("./demo/demo-switch.html");
     $("#select").load("./demo/demo-select.html");
     $("#multiselect").load("./demo/demo-mutil-select.html");
+    $("#transfer").load("./demo/demo-transfer.html");
+    $("#info").load("./demo/demo-info.html");
 });
