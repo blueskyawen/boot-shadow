@@ -1,0 +1,65 @@
+.nc-collapseset {
+    width:60%;
+    min-width:200px;
+    min-height:100px;
+    display: flex;
+    flex-direction:column;
+}
+.nc-collapseset .nc-collapse {
+    margin-bottom:5px;
+}
+.nc-collapseset .nc-collapse header {
+    border:solid 1px #999;
+    width:100%;
+    height:40px;
+    line-height:40px;
+    padding-left:15px;
+    background:#e6e6e6;
+    box-sizing:border-box;
+    cursor:pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    color:#666;
+}
+.nc-collapseset .nc-collapse.active header {
+    border-bottom:none;
+    border-radius: 4px 4px 0 0;
+    color:#1a1a1a;
+}
+.nc-collapseset .nc-collapse header span  {
+    border:solid 3px #999;
+    border-top:none;
+    border-left:none;
+    margin-right:15px;
+    display:inline-block;
+    height:8px;
+    width:8px;
+    transform: rotate(-45deg);
+    transition: transform 0.2s;
+}
+.nc-collapseset .nc-collapse.active header span  {
+    border-color:#1a1a1a;
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+}
+.nc-collapseset .nc-collapse article {
+    width:100%;
+    border:solid 1px #999;
+    border-top:none;
+    box-sizing:border-box;
+    padding:10px;
+    display: none;
+    border-radius: 0 0 4px 4px;
+    opacity:1;
+    max-height:1000px;
+}
+.nc-collapseset .nc-collapse.active {
+    box-shadow: 0px 0px 2px;
+    border-radius: 4px;
+}
+.nc-collapseset .nc-collapse.disable header {
+    color: #1a1a1a;
+    opacity: 0.5;
+    cursor: not-allowed;
+}

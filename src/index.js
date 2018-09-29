@@ -6,3 +6,7 @@ require('./boot-select/bootselect');
 require('./boot-mutil-select/bootmutilselect');
 require('./boot-transfer/boottransfer');
 require('./boot-info/bootinfo');
+require('./boot-collapse/bootcollapse');
+require('./boot-carousel/bootcarousel');
+
+

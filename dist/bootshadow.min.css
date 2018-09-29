@@ -547,6 +547,172 @@
 .nc-error .oper-cancel span:hover{
     background:#800000;
     cursor:pointer;
+}.nc-collapseset {
+    width:60%;
+    min-width:200px;
+    min-height:100px;
+    display: flex;
+    flex-direction:column;
+}
+.nc-collapseset .nc-collapse {
+    margin-bottom:5px;
+}
+.nc-collapseset .nc-collapse header {
+    border:solid 1px #999;
+    width:100%;
+    height:40px;
+    line-height:40px;
+    padding-left:15px;
+    background:#e6e6e6;
+    box-sizing:border-box;
+    cursor:pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    color:#666;
+}
+.nc-collapseset .nc-collapse.active header {
+    border-bottom:none;
+    border-radius: 4px 4px 0 0;
+    color:#1a1a1a;
+}
+.nc-collapseset .nc-collapse header span  {
+    border:solid 3px #999;
+    border-top:none;
+    border-left:none;
+    margin-right:15px;
+    display:inline-block;
+    height:8px;
+    width:8px;
+    transform: rotate(-45deg);
+    transition: transform 0.2s;
+}
+.nc-collapseset .nc-collapse.active header span  {
+    border-color:#1a1a1a;
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+}
+.nc-collapseset .nc-collapse article {
+    width:100%;
+    border:solid 1px #999;
+    border-top:none;
+    box-sizing:border-box;
+    padding:10px;
+    display: none;
+    border-radius: 0 0 4px 4px;
+    opacity:1;
+    max-height:1000px;
+}
+.nc-collapseset .nc-collapse.active {
+    box-shadow: 0px 0px 2px;
+    border-radius: 4px;
+}
+.nc-collapseset .nc-collapse.disable header {
+    color: #1a1a1a;
+    opacity: 0.5;
+    cursor: not-allowed;
+}.nc-carousel {
+    display:block;
+    margin:auto;
+    position:relative;
+    border:solid 1px #999;
+    padding:0;
+}
+.fadeType ul {
+    height:100%;
+    width:100%;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.fadeType ul li{
+    position:absolute;
+    height:100%;
+    width:100%
+}
+.fadeType ul li img{
+    height:100%;
+    width:100%;
+}
+.nc-carousel .bars{
+    display:block;
+    position:absolute;
+    bottom:5%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.nc-carousel .bars span{
+    display:inline-block;
+    height:10px;
+    width:10px;
+    border:solid 2px #999;
+    border-radius:50%;
+    cursor:pointer;
+    margin-left:5px;
+}
+.nc-carousel .bars span:hover,.nc-carousel .bars span.active{
+    border-color:#fff;
+}
+.nc-carousel .left{
+    display:inline-block;
+    height:8px;
+    width:8px;
+    border:solid 4px #666;
+    border-color: #666 transparent transparent #666;
+    opacity:0.8;
+    position:absolute;
+    top:50%;
+    left:15px;
+    transform: translateY(-50%) rotate(-45deg);
+    cursor:pointer;
+}
+.nc-carousel .left:hover{
+    border-color: #fff transparent transparent #fff;
+}
+.nc-carousel .right{
+    display:inline-block;
+    height:8px;
+    width:8px;
+    border:solid 4px #666;
+    border-color: #666 #666 transparent transparent;
+    opacity:0.8;
+    position:absolute;
+    top:50%;
+    right:15px;
+    transform: translateY(-50%) rotate(45deg);
+    cursor:pointer;
+}
+.nc-carousel .right:hover{
+    border-color: #fff  #fff transparent transparent;
+}
+
+.slideType ul{
+    height:100%;
+    width:100%;
+    list-style:none;
+    padding:0;
+    margin:0;
+    position:relative;
+    overflow:hidden;
+}
+.slideType ul li{
+    height:100%;
+    width:100%;
+    display:inline-block;
+    position:absolute;
+    transition: left 1s ease-out;
+}
+.slideType ul li:first-child{
+    left:0%;
+}
+.slideType ul li:not(:first-child){
+    top:100%;
+}
+.slideType ul li img{
+    height:100%;
+    width:100%;
+    max-height:100%;
+    max-width:100%;
 }*,*::after,*::before {
     box-sizing: content-box;
 }.nc-select-dropdown{

@@ -18,4 +18,6 @@ $(function() {
     $("#multiselect").load("./demo/demo-mutil-select.html");
     $("#transfer").load("./demo/demo-transfer.html");
     $("#info").load("./demo/demo-info.html");
+    $("#collapse").load("./demo/demo-collapse.html");
+    $("#carousel").load("./demo/demo-carousel.html");
 });
