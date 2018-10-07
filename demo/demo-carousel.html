@@ -18,7 +18,7 @@
     </div>
 </div>
 <div id="demo19" class="collapse">
-    <textarea style="height:600px;">
+    <textarea style="height:200px;">
     <div id="carousel-fade"></div>
 
     $(function() {
@@ -96,6 +96,49 @@
     });
     </textarea>
 </div>
+<h5 class="hh5">插件方法与事件</h5>
+<div class="card">
+    <div class="card-body">
+        <div id="carousel-slide-oper"></div>
+        <div style="margin-top: 20px;" class="btn-groupss">
+            <button class="btn btn-primary">启动循环播放</button>
+            <button class="btn btn-primary">停止循环播放</button>
+            <button class="btn btn-success">切换上一页</button>
+            <button class="btn btn-success">切换下一页</button>
+            <button class="btn btn-success">切换到第1页</button>
+            <button class="btn btn-success">切换到第3页</button>
+        </div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo21">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo21" class="collapse">
+    <textarea style="height:200px;">
+    <div id="carousel-slide-oper"></div>
+
+    $(function() {
+        $("#carousel-slide-oper").bootCarousel({options: optionss2,type: 'slide',
+                                                 width:'90%',height:500,interval:5000,pause:true});
+
+        $("#carousel-slide-oper").eq(0).bootCarousel('cycle');
+        $("#carousel-slide-oper").eq(1).bootCarousel('pause');
+        $("#carousel-slide-oper").eq(2).bootCarousel('prev');
+        $("#carousel-slide-oper").eq(3).bootCarousel('next');
+        $("#carousel-slide-oper").eq(4).bootCarousel(1);
+        $("#carousel-slide-oper").eq(5).bootCarousel(2);
+
+        $("#carousel-slide-oper").on("change.bc.carousel",function() {
+            if(++count == 50) {$(this).bootCarousel('pause');}
+        });
+        $("#carousel-slide-oper").on("changed.bc.carousel",function() {
+            if(++count == 50) {$(this).bootCarousel('pause');}
+        });
+    });
+    </textarea>
+</div>
 
 <h3 class="font-weight-bold hh3">- 参数</h3>
 <table class="table">
@@ -134,7 +177,7 @@
     </tr>
     <tr>
         <td>pause</td>
-        <td>是否支持暂停播放</td>
+        <td>是否支持鼠标进入时暂停轮播循环，鼠标离开时恢复轮播循环</td>
         <td>Boolean</td>
         <td>false</td>
     </tr>
@@ -203,6 +246,11 @@
         <td>change.bc.carousel</td>
         <td>图片切换时触发</td>
         <td>$("#carousel-slide").on("change.bc.carousel",() => {});</td>
+    </tr>
+    <tr>
+        <td>changed.bc.carousel</td>
+        <td>图片切换完成后触发</td>
+        <td>$("#carousel-slide").on("changed.bc.carousel",() => {});</td>
     </tr>
     </tbody>
 </table>

@@ -19,26 +19,25 @@ $(function() {
         dataApi:true});
     $("#carousel-slide-2").bootCarousel({options: optionss2,type: 'slide',
         width:'80%',height:450});
+    $("#carousel-slide-oper").bootCarousel({options: optionss2,type: 'slide',
+        width:'90%',height:500,interval:5000,pause:true});
 
-    /*$(".btn-group1 button").click(function() {
+    $(".btn-groupss button").click(function() {
         var tmpIndex = $(this).index();
-        if(tmpIndex === 0) {$("#carousel-fade").bootCarousel(1);}
-        if(tmpIndex === 1) {$("#carousel-fade").bootCarousel(3);}
-        if(tmpIndex === 2) {$("#carousel-fade").bootCarousel('prev');}
-        if(tmpIndex === 3) {$("#carousel-fade").bootCarousel('next');}
-    });
-    $(".btn-group2 button").click(function() {
-        var tmpIndex = $(this).index();
-        if(tmpIndex === 0) {$("#carousel-slide").bootCarousel('cycle');}
-        if(tmpIndex === 1) {$("#carousel-slide").bootCarousel('pause');}
+        if(tmpIndex === 0) {$("#carousel-slide-oper").bootCarousel('cycle');}
+        if(tmpIndex === 1) {$("#carousel-slide-oper").bootCarousel('pause');}
+        if(tmpIndex === 2) {$("#carousel-slide-oper").bootCarousel('prev');}
+        if(tmpIndex === 3) {$("#carousel-slide-oper").bootCarousel('next');}
+        if(tmpIndex === 4) {$("#carousel-slide-oper").bootCarousel(1);}
+        if(tmpIndex === 5) {$("#carousel-slide-oper").bootCarousel(3);}
     });
 
-    $("#carousel-slide").on("change.bc.carousel",function() {
+    $("#carousel-slide-oper").on("change.bc.carousel",function() {
         count++;
         if(count == 50) {$(this).bootCarousel('pause');}
     });
-    $("#carousel-slide").on("changed.bc.carousel",function() {
+    $("#carousel-slide-oper").on("changed.bc.carousel",function() {
         count++;
         if(count == 50) {$(this).bootCarousel('pause');}
-    });*/
+    });
 });

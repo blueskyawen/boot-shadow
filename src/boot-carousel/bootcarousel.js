@@ -234,7 +234,7 @@ import './bootcarousel.css';
     Carousel.prototype.setItemByOper = function(oper) {
         var that=this;
         if(oper === 'pause') {
-            if(this.options.pause && this.options.timer) {
+            if(this.options.timer) {
                 clearInterval(that.options.timer );
                 that.options.timer = undefined;
             }
