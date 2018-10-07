@@ -1,0 +1,238 @@
+<h1>Tabs标签页</h1>
+<p class="lead">选项卡切换组件</p>
+<h3 class="font-weight-bold hh3">- 何时使用</h3>
+<ul>
+    <li>提供平级的区域将大块内容进行收纳和展现，保持界面整洁</li>
+    <li>标准线条式页签，用于容器内部的主功能切换，这是最常用的 Tabs</li>
+    <li>Buttons可作为更次级的页签来使用</li>
+</ul>
+<h3 class="font-weight-bold hh3">- 示例</h3>
+<h5 class="hh5">选项卡样式-上划线</h5>
+<div class="card">
+    <div class="card-body">
+        <div class="nc-nav-tabs" id="tab1">
+            <ul class="tab-bars">
+                <li  class="disabled" name="html">html</li>
+                <li name="css">css</li>
+                <li name="dom">dom</li>
+                <li name="javascript">javascript</li>
+            </ul>
+            <div class="tab-content" >
+                <div name="html">Html</div>
+                <div name="css">Css</div>
+                <div name="dom">Dom</div>
+                <div name="javascript">Javascript</div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo26">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo26" class="collapse">
+    <textarea style="height:200px;">
+    <div class="nc-nav-tabs" id="tab1">
+        <ul class="tab-bars">
+            <li  class="disabled" name="html">html</li>
+            <li name="css">css</li>
+            <li name="dom">dom</li>
+            <li name="javascript">javascript</li>
+        </ul>
+        <div class="tab-content" >
+            <div name="html">Html</div>
+            <div name="css">Css</div>
+            <div name="dom">Dom</div>
+            <div name="javascript">Javascript</div>
+        </div>
+    </div>
+
+    $(function() {
+        $("#tab1").bootTab();
+    });
+    </textarea>
+</div>
+<h5 class="hh5">选项卡样式-下划线</h5>
+<div class="card">
+    <div class="card-body">
+        <div class="nc-nav-tabs nav-down" id="tab2">
+            <ul class="tab-bars">
+                <li name="html">html</li>
+                <li name="css">css</li>
+                <li class="disabled" name="dom">dom</li>
+                <li name="javascript">javascript</li>
+            </ul>
+            <div class="tab-content" >
+                <div name="html">Html</div>
+                <div name="css">Css</div>
+                <div name="dom">Dom</div>
+                <div name="javascript">Javascript</div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo27">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo27" class="collapse">
+    <textarea style="height:200px;">
+    <div class="nc-nav-tabs nav-down" id="tab2">
+        <ul class="tab-bars">
+            <li name="html">html</li>
+            <li name="css">css</li>
+            <li class="disabled" name="dom">dom</li>
+            <li name="javascript">javascript</li>
+        </ul>
+        <div class="tab-content" >
+            <div name="html">Html</div>
+            <div name="css">Css</div>
+            <div name="dom">Dom</div>
+            <div name="javascript">Javascript</div>
+        </div>
+    </div>
+
+    $(function() {
+        $("#tab2").bootTab({defaultActive: 0});
+    });
+    </textarea>
+</div>
+<h5 class="hh5">二级选项卡</h5>
+<div class="card">
+    <div class="card-body">
+        <div class="nc-nav-tabs second-nav" id="tab3">
+            <ul class="tab-bars">
+                <li name="html">html</li>
+                <li name="css">css</li>
+                <li class="disabled" name="dom">dom</li>
+                <li name="javascript">javascript</li>
+            </ul>
+            <div class="tab-content" >
+                <div name="html">Html</div>
+                <div name="css">Css</div>
+                <div name="dom">Dom</div>
+                <div name="javascript">Javascript</div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo28">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo28" class="collapse">
+    <textarea style="height:200px;">
+    <div class="nc-nav-tabs second-nav" id="tab3">
+        <ul class="tab-bars">
+            <li name="html">html</li>
+            <li name="css">css</li>
+            <li class="disabled" name="dom">dom</li>
+            <li name="javascript">javascript</li>
+        </ul>
+        <div class="tab-content" >
+            <div name="html">Html</div>
+            <div name="css">Css</div>
+            <div name="dom">Dom</div>
+            <div name="javascript">Javascript</div>
+        </div>
+    </div>
+
+    $(function() {
+        $("#tab3").bootTab({defaultActive: 1});
+    });
+    </textarea>
+</div>
+<h5 class="hh5">>手动切换选项卡</h5>
+<div class="card">
+    <div class="card-body">
+        <div class="nc-nav-tabs second-nav" id="tab4">
+            <ul class="tab-bars">
+                <li name="html">html</li>
+                <li name="css">css</li>
+                <li name="dom">dom</li>
+                <li name="javascript">javascript</li>
+            </ul>
+            <div class="tab-content" >
+                <div name="html">Html</div>
+                <div name="css">Css</div>
+                <div name="dom">Dom</div>
+                <div name="javascript">Javascript</div>
+            </div>
+        </div>
+        <button id="btn01" class="btn btn-primary">切换到编号0选项</button>
+        <button id="btn02" class="btn btn-primary">切换到标题为“javascript”选项</button>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo29">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo29" class="collapse">
+    <textarea style="height:200px;">
+    $(function() {
+        $("#tab4").bootTab();
+
+        $("#btn01").click(function() {
+            $("#tab4").bootTab(0);
+        });
+        $("#btn02").click(function() {
+            $("#tab4").bootTab('javascript');
+        });
+    });
+    </textarea>
+</div>
+
+<h3 class="font-weight-bold hh3">- 参数</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>defaultActive</td>
+        <td>默认激活的选项卡编号</td>
+        <td>Number</td>
+        <td>0</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 方法</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>方法</th>
+        <th>说明</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>bootCollapse(Option)</td>
+        <td>接收一个可选的对象，初始化插件</td>
+        <td>Object</td>
+    </tr>
+    <tr>
+        <td>bootTab(Number)</td>
+        <td>指定激活对应编号选项卡</td>
+        <td>$("#tab").bootTab(0)</td>
+    </tr>
+    <tr>
+        <td>bootTab(String)</td>
+        <td>指定激活对应标题选项卡</td>
+        <td>$("#tab").bootTab('javascript')</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 事件</h3>
+<p>无</p>
+
+<script src="./demo/demo-tab.js"></script>

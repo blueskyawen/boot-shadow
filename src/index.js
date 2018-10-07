@@ -9,5 +9,6 @@ require('./boot-info/bootinfo');
 require('./boot-collapse/bootcollapse');
 require('./boot-carousel/bootcarousel');
 require('./boot-model/bootmodel');
+require('./boot-tab/boottab');
 
 

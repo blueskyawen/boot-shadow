@@ -21,4 +21,5 @@ $(function() {
     $("#collapse").load("./demo/demo-collapse.html");
     $("#carousel").load("./demo/demo-carousel.html");
     $("#model").load("./demo/demo-modal.html");
+    $("#tab").load("./demo/demo-tab.html");
 });
