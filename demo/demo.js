@@ -25,4 +25,5 @@ $(function() {
     $("#scrollspy").load("./demo/demo-scrollspy.html");
     $("#affix").load("./demo/demo-affix.html");
     $("#dropdown").load("./demo/demo-dropdown.html");
+    $("#table").load("./demo/demo-table.html");
 });
