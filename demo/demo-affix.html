@@ -1,0 +1,125 @@
+<h1>附加导航（Affix）插件</h1>
+<p class="lead">附加导航</p>
+<h3 class="font-weight-bold hh3">- 何时使用</h3>
+<ul>
+    <li>允许指定导航固定在页面的某个位置</li>
+</ul>
+<h3 class="font-weight-bold hh3">- 示例</h3>
+<div class="card">
+    <div class="card-body">
+        <button id="info-affix-2" class="btn btn-success">Demo</button>
+    </div>
+    <div class="d-flex">
+        <a href="#" class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo30">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo30" class="collapse">
+    <textarea style="height:500px;">
+    <div class="nc-container">
+        <div class="nc-jumbotron">
+            <h1>Bootstrap Affix</h1>
+        </div>
+        <div class="row">
+            <div class="nc-scrollspy" id="myScrollspy">
+                <ul class="nav" id="myAffix">
+                    <li><a href="#section-1">第一部分</a></li>
+                    <li><a href="#section-2">第二部分</a></li>
+                    <li><a href="#section-3">第三部分</a></li>
+                    <li><a href="#section-4">第四部分</a></li>
+                    <li><a href="#section-5">第五部分</a></li>
+                </ul>
+            </div>
+            <div class="content" data-target="#myScrollspy">
+                <h2 id="section-1">第一部分</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis.</p>
+                <hr>
+                <h2 id="section-2">第二部分</h2>
+                <p>Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse ultrices placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra tincidunt. Quisque non sapien nec lacus condimentum facilisis ut iaculis enim. Sed viverra interdum bibendum. Donec ac </p>
+                <p>Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse ultrices placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra tincidunt. Quisque non sapien nec lacus condimentum facilisis ut iaculis enim. Sed viverra interdum bibendum. Donec ac </p>
+                <hr>
+                <h2 id="section-3">第三部分</h2>
+                <p>Integer pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien vel, porttitor bibendum enim. Donec sed nibh vitae lorem porttitor blandit in nec ante. Pellentesque vitae metus ipsum. Phasellus sed nunc ac sem malesuada condimentum. Etiam in aliquam lectus. Nam vel sapien diam. </p>
+
+                <hr>
+                <h2 id="section-4">第四部分</h2>
+                <p>Suspendisse a orci facilisis, dignissim tortor vitae, ultrices mi. Vestibulum a iaculis lacus. Phasellus vitae convallis ligula, nec volutpat tellus. Vivamus scelerisque mollis nisl, nec vehicula elit egestas a. Sed luctus metus id mi gravida, faucibus convallis neque pretium. Maecenas quis sapien ut leo fringilla tempor vitae sit amet leo..</p>
+                <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. </p>
+                <hr>
+                <h2 id="section-5">第五部分</h2>
+                <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. </p>
+                <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2>Bootstrap Affix Footer</h2>
+            <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. </p>
+            <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. </p>
+        </div>
+        <div class="autor">
+            <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. </p>
+            <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. </p>
+        </div>
+    </div>
+
+    $(function() {
+        $("#myAffix").bootAffix({id:'myAffix',offset:20});
+    });
+    </textarea>
+</div>
+
+<h3 class="font-weight-bold hh3">- 参数</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>id</td>
+        <td>内容框Id</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>offset</td>
+        <td>侦测偏移，当滚动条到相应标题内容小于此偏移是激活对应导航栏</td>
+        <td>Number</td>
+        <td>20px</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 方法</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>方法</th>
+        <th>说明</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>bootAffix(Option)</td>
+        <td>接收一个可选的对象，初始化插件</td>
+        <td>Object</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 事件</h3>
+<p>无</p>
+
+<script>
+    $(function() {
+        $("#info-affix-2").click(function() {
+            window.open("./demo/demo-affix-03.html");
+        });
+    });
+</script>

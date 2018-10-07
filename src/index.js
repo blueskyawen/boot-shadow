@@ -10,5 +10,7 @@ require('./boot-collapse/bootcollapse');
 require('./boot-carousel/bootcarousel');
 require('./boot-model/bootmodel');
 require('./boot-tab/boottab');
+require('./boot-scrollspy/bootscrollspy');
+require('./boot-affix/bootaffix');
 
 

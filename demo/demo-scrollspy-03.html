@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boot-Shadow</title>
+    <link rel="icon" type="image/x-icon" href="./turkey_48px_1218408_easyicon.net.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="../style.css" rel="stylesheet">
+    <link href="../dist/bootshadow.min.css" rel="stylesheet">
+    <script src="../dist/bootshadow.min.js"></script>
+</head>
+<body>
+    <nav class="nc-navbar" id="navbar-example">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">菜鸟教程</a>
+        </div>
+        <div class="navbar-divider">
+        </div>
+        <div class="navbar-body">
+            <ul class="navbar-nav">
+                <li><a href="#ios">主页</a></li>
+                <li class="dropdown">
+                    <a  href="#news">新闻</a><span class="carcat"></span>
+                    <ul class="dropdown-content">
+                        <li class="dropdown-item">
+                            <a href="#xinna">新浪</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a tabindex="-1" href="#sohu">搜狐</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a tabindex="-1" href="#xiaomi">小米</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="noactive"href="#contact" onclick="selectNav(2)">联系</a></li>
+            </ul>
+            <ul class="navbar-nav">
+                <li><a  class="noactive" href="#register" onclick="selectNav(3)">注册</a></li>
+                <li><a  class="noactive" href="#login" onclick="selectNav(3)">登录</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mavcontent" data-target="#navbar-example" id="mymavcontent">
+        <h4 id="ios">主页</h4>
+        <p>主页(home page)，也被称为首页，是用户打开浏览器时默认打开的网页，主要包含个人主页、网站网页、组织或活动主页、公司主页等。
+        </p>
+
+        <h4 id="news">新闻</h4>
+        <p>新闻 [1]  ，是指报纸、电台、电视台、互联网等媒体经常使用的记录与传播信息的 [2]  一种文体。是记录社会、传播信息、反映时代的一种文体。
+            新闻概念有广义与狭义之分。广义上：除了发表于报刊、广播、互联网、电视上的评论与专文外的常用文本都属于新闻，包括消息、通讯、特写、速写（有的将速写纳入特写之列）等等；
+        </p>
+        <h4 id="xinna">新浪</h4>
+        <p>新浪（NASDAQ：SINA），是一家网络公司的名称，成立于1998年12月，由王志东创立，现任董事长为：曹国伟，服务大中华地区与海外华人，新浪拥有多家地区性网站。
+        </p>
+        <h4 id="sohu">搜狐</h4>
+        <p>搜狐公司是中国的新媒体、通信及移动增值服务公司，是互联网品牌。搜狐是一个新闻中心、联动娱乐市场，跨界经营的娱乐中心、体育中心、时尚文化中心。搜狐公司是2008北京奥运会互联网内容服务赞助商。
+        </p>
+        <h4 id="xiaomi">小米</h4>
+        <p>为发烧而生”是小米的产品概念。小米公司创造了用互联网模式开发手机操作系统、发烧友参与开发改进的模式。小米还是继苹果、三星、华为之后第四家拥有手机芯片自研能力的科技公司。
+            “让每个人都能享受科技的乐趣”是小米公司的愿景。小米公司应用了互联网开发模式开发产品的模式，用极客精神做产品，用互联网模式干掉中间环节，致力让全球每个人，都能享用来自中国的优质科技产品。 [2]
+        </p>
+
+        <h4 id="contact">联系</h4>
+        <p>联系，读作lián xì。简单的含义是联络、接洽，复杂的含义是事物之间的有机关联。联系同时也是一个哲学概念。指事物内部矛盾双方和事物之间所发生的关系。事物的联系是普遍存在的、多种多样的。
+        </p>
+
+        <h4 id="register">注册</h4>
+        <p>注册是汉语词汇，汉语拼音为zhù cè是把名字记入簿册，多指取得某种资格 。也意为由主管部门办理手续，记入籍册，便于管理查考。一般网络游戏注册需填写：账号、密码、确认密码、注册邮箱、真实姓名、身份证、验证码、同意用户协议。
+        </p>
+
+        <h4 id="login">登录</h4>
+        <p>分时系统允许多个用户同时使用一台计算机，为了保证系统的安全和记账方便，系统要求每个用户有单独的帐号作为登录标识，系统还为每个用户指定了一个口令。用户在使用该系统之前要输入标识和口令，这个过程被称为“登录”。
+        </p>
+
+        <p>Spring 框架最初是由 Rod Johnson 编写的，在 2003 年 6 月首次发布于 Apache 2.0 许可证下。
+        </p>
+    </div>
+
+    <script>
+        $(function() {
+            $("#mymavcontent").bootScrollspy({id:'navbar-example',offset:10});
+        });
+    </script>
+</body>
+</html>

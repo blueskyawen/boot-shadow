@@ -22,4 +22,6 @@ $(function() {
     $("#carousel").load("./demo/demo-carousel.html");
     $("#model").load("./demo/demo-modal.html");
     $("#tab").load("./demo/demo-tab.html");
+    $("#scrollspy").load("./demo/demo-scrollspy.html");
+    $("#affix").load("./demo/demo-affix.html");
 });
