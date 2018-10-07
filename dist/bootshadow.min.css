@@ -713,8 +713,273 @@
     width:100%;
     max-height:100%;
     max-width:100%;
-}*,*::after,*::before {
+}.nc-dialog-container {
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    display:none;
+    overflow-y:auto;
+}
+.nc-dialog-container .shade{
+    height:100%;
+    width:100%;
+    background:#ccc;
+    opacity: 0.5;
+    position: fixed;
+}
+.nc-dialog-container .nc-Dialog{
+    display: flex;
+    flex-direction:column;
+    position: absolute;
+    z-index: 2000;
+    opacity: 1;
+    left:50%;
+    top:60px;
+    overflow: auto;
+    background:#fff;
+    border:solid 1px #999;
+    border-radius:8px;
+    width:50%;
+    min-height:120px;
+    transform: translateX(-50%);
+    box-shadow:2px 2px 2px #a3a375;
+    -webkit-animation: modal-out  200ms;
+    animation: modal-out  200ms;
+    -moz-animation: modal-out 200ms;
+}
+@keyframes modal-out {
+    0% {top:0px;}
+    100% {top:60px;}
+}
+.nc-Dialog header{
+    border:solid 0px;
+    height:36px;
+    line-height:36px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.nc-Dialog header span:first-child{
+    margin-left:15px;
+    font-size:14px;
+}
+.nc-Dialog header span:last-child{
+    height:23px;
+    width:23px;
+    line-height:23px;
+    text-align:center;
+    border-radius:50%;
+    margin-right:15px;
+}
+.nc-Dialog header span:last-child:hover{
+    background:#a6a6a6;
+    cursor:pointer;
+}
+.nc-Dialog article{
+    display:inline-block;
+    width:90%;
+    border:solid 0px;
+    margin:auto;
+    margin-top:10px;
+}
+.nc-Dialog article .description{
+    width:90%;
+    display:flex;
+    margin:auto;
+    border:solid 1px #66ccff;
+    border-radius:4px;
+    background:#e5f7ff;
+    padding:8px;
+}
+.nc-Dialog article .description .grade{
+    width:20px;
+    height:20px;
+    text-align:center;
+    line-height:20px;
+    border-radius:50%;
+    border:solid 1px #0040ff;
+    color:#0040ff;
+    margin-top:5px;
+    margin-left:5px
+}
+.nc-Dialog article .description .btext{
+    width:90%;
+    font-size:12px;
+    text-align:left;
+    margin-left:10px;;
+}
+article form {
+    width:90%;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+    display: block;
+}
+.nc-Dialog footer{
+    width:90%;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+}
+.big{
+    width:70%;
+    min-height:500px;
+}
+
+
+.dialog-Confirm article {
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.dialog-Confirm article .description{
+    display:flex;
+    flex-direction:column;
+    border:none;
+    background:#fff;
+}
+.dialog-Confirm .description .gradetitle{
+    display:flex;
+    height:36px;
+    line-height:36px;
+    border:none;
+}
+.dialog-Confirm .description .gradetitle .icon{
+    display:inline-block;
+    height:24px;
+    width:24px;
+    border-radius:50%;
+    line-height:24px;
+    text-align:center;
+    color:#fff;
+    margin-top:6px;
+}
+.back-blue{
+    background:#0040ff;
+}
+.back-red{
+    background:#ff1a1a;
+}
+.dialog-Confirm .description .gradetitle .title{
+    display:inline-block;
+    font-size:16px;
+    font-weight:bold;
+    margin-left:10px;
+}
+.dialog-Confirm .description .btext p{
+    display:inline-block;
+    width:100%;
+    font-size:12px;
+    border:solid 0px;
+    margin-left:24px;
+}
+.wenzhang{
+    margin:30px;
+    line-height:30px;
+    text-indent:50px;
+}
+
+.icon-green{
+    border:solid 1px #009900;
+    color:#009900;
+}
+.icon-yellow{
+    border:solid 1px #ff9900;
+    color:#ff9900;
+}
+.icon-red{
+    border:solid 1px #ff1a1a;
+    color:#ff1a1a;
+}
+*,*::after,*::before {
     box-sizing: content-box;
+}
+
+button {
+    cursor:pointer;
+}
+button.normal{
+    height:42px;
+    width:120px;
+    border-radius:4px;
+    border:none;
+    background:#1aa3ff;
+    color:#fff;
+}
+.buttons button{
+    height:36px;
+    width:100px;
+    border-radius:4px;
+    border:solid 1px #1aa3ff;
+    margin-left:5px;
+    margin-right:5px;
+}
+button.confirm{
+    background:#1aa3ff;
+    color:#fff;
+}
+button.confirm:hover{
+    background:#006bb3;
+}
+button.disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+button.cancel{
+    background:#fff;
+    color:#666;
+    border:solid 1px #666;
+}
+button.cancel:hover{
+    border-color:#1aa3ff;
+}
+button.delete{
+    background:#ff1a1a;
+    color:#fff;
+    border-color:#ff1a1a;
+}
+button.delete:hover{
+    background:#990000;
+    border-color:#990000;
+}
+.form-group{
+    text-align:left;
+    height:30px;
+    align-items:center;
+    margin-bottom:20px;
+    display:flex;
+}
+.form-group label{
+    width:120px;
+    text-align:center;
+    height:100%;
+    font-size:12px;
+    display:inline-flex;
+    justify-content:flex-end;
+    align-items:center;
+    margin-right:5px;
+}
+.form-group label:after{
+    content:":"
+}
+.form-group .group-right{
+    height:100%;
+    font-size:14px;
+    display:inline-block;
+}
+.form-group .group-right  input{
+    height:100%;
+    width:360px;
+    font-size:14px;
+    border:solid 1px  #999999;
+    border-radius:4px;
+    box-shadow:none;
+}
+.form-group .group-right input:focus{
+    border-color:#0039e6;
 }.nc-select-dropdown{
     margin:20px;
     position:relative;

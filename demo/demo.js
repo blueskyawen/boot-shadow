@@ -20,4 +20,5 @@ $(function() {
     $("#info").load("./demo/demo-info.html");
     $("#collapse").load("./demo/demo-collapse.html");
     $("#carousel").load("./demo/demo-carousel.html");
+    $("#model").load("./demo/demo-modal.html");
 });

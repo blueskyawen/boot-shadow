@@ -1,0 +1,345 @@
+<h1>Model对话框</h1>
+<p class="lead">模态框是覆盖在父窗体上的子窗体</p>
+<h3 class="font-weight-bold hh3">- 何时使用</h3>
+<ul>
+    <li>目的是显示来自一个单独的源的内容，可以在不离开父窗体的情况下有一些互动</li>
+    <li>子窗体可提供信息交互</li>
+</ul>
+<h3 class="font-weight-bold hh3">- 示例</h3>
+<h5 class="hh5">正常展开</h5>
+<div class="card">
+    <div class="card-body">
+        <button class="btn btn-primary">标准尺寸</button>
+        <button class="btn btn-primary">大尺寸</button>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo24">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo24" class="collapse">
+    <textarea style="height:600px;">
+    <div class="nc-dialog-container" id="model1">
+        <div class="shade"></div>
+        <div class="nc-Dialog">
+            <header>
+                <span>操作名称</span>
+                <span class="cancel">×</span>
+            </header>
+            <article>
+                <div class="description">
+                    <span class="grade">!</span>
+                    <span class="btext">HTML 4 的新特性之一是可以使 HTML 事件触发浏览器中的行为，比方说当用户点击某个 HTML 元素时启动一段 JavaScript.</span>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label>姓名</label>
+                        <div class="group-right">
+                            <input type="text" name="_name" value="Jack" maxlength="8"
+                                   autocomplete="on"  required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>技能</label>
+                        <div class="group-right">
+                            <input type="text" name="_skill" value="" autocomplete="on" />
+                        </div>
+                    </div>
+                </form>
+            </article>
+            <footer>
+                <div class="buttons">
+                    <button class="confirm">确定</button>
+                    <button class="cancel">取消</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="nc-dialog-container" id="model2">
+        <div class="shade"></div>
+        <div class="nc-Dialog big">
+            <header>
+                <span>操作名称</span>
+                <span  class="cancel">×</span>
+            </header>
+            <article>
+                <div class="description">
+                    <span class="grade">!</span>
+                    <span class="btext">HTML 4 的新特性之一是可以使 HTML 事件触发浏览器中的行为，比方说当用户点击某个 HTML 元素时启动一段 JavaScript.</span>
+                </div>
+                <div class="wenzhang">
+                    <p>倚在冬的门楣，静心遥盼雪天使的降临。娉娉婷婷，风姿绰约，飘飘扬扬，曼妙万千。以一身晶莹，绽放独特魅力；以一分柔媚，征服万物生灵；以一缕素洁，攫获万心宠爱。如蝶飞舞，如梦唯美，如烟轻柔，如雾飘缈，如心纯净，如水澄澈。</p>
+                    <p>忧郁的愁丝晕染了流年的底色，孤寒的素洁染白了寒冬的萧瑟。凛冽的寒风呼啸而来，残瘦的枯枝在风中摇曳。清冷的浩空好似在酝酿一场盛大的群舞盛宴，天边仿佛飞来白茫茫一片素洁，那是雪精灵在炫舞翩跹。曼妙的舞姿，灵动的舞步，飘逸的神韵，优雅地绽放，美而不艳，媚而不俗，令人沉醉，不能自拔……</p>
+                    <p>“晚来天欲雪，能饮一杯无？”——期盼了一个冬季的雪花，终于纷纷扬扬地飘洒在苍穹的天宇。隔着透明的玻璃窗，看着一片片雪花轻盈飘落，心底情不自禁地奔涌出一股抑制不住的惊喜。迫不及待地推开门，只见千千万万片飞絮，犹如一片片雪白的鹅毛，洋洋洒洒地从天而降，穿越浩渺星空，飞向苍茫大地。</p></div>
+            </article>
+            <footer>
+                <div class="buttons">
+                    <button class="confirm">确定</button>
+                    <button class="cancel">取消</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <button class="btn btn-primary">标准尺寸</button>
+    <button class="btn btn-primary">大尺寸</button>
+
+    $(function() {
+        $("#model1").bootModel();
+        $("#model2").bootModel();
+
+        $("button:contains('标准尺寸')").click(function() {
+            $("#model1").bootModel('show');
+        });
+        $("button:contains('大尺寸')").click(function() {
+            $("#model2").bootModel('show');
+        });
+    });
+    </textarea>
+</div>
+
+<h5 class="hh5">操作提示框</h5>
+<div class="card">
+    <div class="card-body">
+        <button class="normal">操作确认</button>
+        <button class="normal">删除</button>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo25">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo25" class="collapse">
+    <textarea style="height:600px;">
+    <div class="nc-dialog-container" id="model3">
+        <div class="shade"></div>
+        <div class="nc-Dialog dialog-Confirm">
+            <header>
+                <span>操作名称</span>
+                <span class="cancel">×</span>
+            </header>
+            <article>
+                <div class="description">
+                    <div class="gradetitle">
+                        <span class="icon back-blue">!</span>
+                        <span class="title">我是副标题</span>
+                    </div>
+                    <div class="btext"><p>新特性之一是可以使 HTML 事件触发浏览器中的行为，比方说当用户点击某个元素时启动一段 JavaScript</p></div>
+                </div>
+            </article>
+            <footer>
+                <div class="buttons">
+                    <button class="confirm">确定</button>
+                    <button class="cancel">取消</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="nc-dialog-container" id="model4">
+        <div class="shade"></div>
+        <div class="nc-Dialog dialog-Confirm">
+            <header>
+                <span>操作名称</span>
+                <span class="cancel">×</span>
+            </header>
+            <article>
+                <div class="description">
+                    <div class="gradetitle">
+                        <span class="icon back-red">!</span>
+                        <span class="title">我是副标题</span>
+                    </div>
+                    <div class="btext"><p>新特性之一是可以使 HTML 事件触发浏览器中的行为，比方说当用户点击某个元素时启动一段 JavaScript</p></div>
+                </div>
+            </article>
+            <footer>
+                <div class="buttons">
+                    <button class="delete">删除</button>
+                    <button class="cancel">取消</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <button class="normal">操作确认</button>
+    <button class="normal">删除</button>
+
+    $(function() {
+        $("#model3").bootModel();
+        $("#model4").bootModel();
+
+        $("button:contains('操作确认')").click(function() {
+            $("#model3").bootModel('show');
+        });
+        $("button:contains('删除')").click(function() {
+            $("#model4").bootModel('show');
+        });
+    });
+    </textarea>
+</div>
+
+<div class="nc-dialog-container" id="model1">
+    <div class="shade"></div>
+    <div class="nc-Dialog">
+        <header>
+            <span>操作名称</span>
+            <span class="cancel">×</span>
+        </header>
+        <article>
+            <div class="description">
+                <span class="grade">!</span>
+                <span class="btext">HTML 4 的新特性之一是可以使 HTML 事件触发浏览器中的行为，比方说当用户点击某个 HTML 元素时启动一段 JavaScript.</span>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label>姓名</label>
+                    <div class="group-right">
+                        <input type="text" name="_name" value="Jack" maxlength="8"
+                               autocomplete="on"  required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>技能</label>
+                    <div class="group-right">
+                        <input type="text" name="_skill" value="" autocomplete="on" />
+                    </div>
+                </div>
+            </form>
+        </article>
+        <footer>
+            <div class="buttons">
+                <button class="confirm">确定</button>
+                <button class="cancel">取消</button>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="nc-dialog-container" id="model2">
+    <div class="shade"></div>
+    <div class="nc-Dialog big">
+        <header>
+            <span>操作名称</span>
+            <span  class="cancel">×</span>
+        </header>
+        <article>
+            <div class="description">
+                <span class="grade">!</span>
+                <span class="btext">HTML 4 的新特性之一是可以使 HTML 事件触发浏览器中的行为，比方说当用户点击某个 HTML 元素时启动一段 JavaScript.</span>
+            </div>
+            <div class="wenzhang">
+                <p>倚在冬的门楣，静心遥盼雪天使的降临。娉娉婷婷，风姿绰约，飘飘扬扬，曼妙万千。以一身晶莹，绽放独特魅力；以一分柔媚，征服万物生灵；以一缕素洁，攫获万心宠爱。如蝶飞舞，如梦唯美，如烟轻柔，如雾飘缈，如心纯净，如水澄澈。</p>
+                <p>忧郁的愁丝晕染了流年的底色，孤寒的素洁染白了寒冬的萧瑟。凛冽的寒风呼啸而来，残瘦的枯枝在风中摇曳。清冷的浩空好似在酝酿一场盛大的群舞盛宴，天边仿佛飞来白茫茫一片素洁，那是雪精灵在炫舞翩跹。曼妙的舞姿，灵动的舞步，飘逸的神韵，优雅地绽放，美而不艳，媚而不俗，令人沉醉，不能自拔……</p>
+                <p>“晚来天欲雪，能饮一杯无？”——期盼了一个冬季的雪花，终于纷纷扬扬地飘洒在苍穹的天宇。隔着透明的玻璃窗，看着一片片雪花轻盈飘落，心底情不自禁地奔涌出一股抑制不住的惊喜。迫不及待地推开门，只见千千万万片飞絮，犹如一片片雪白的鹅毛，洋洋洒洒地从天而降，穿越浩渺星空，飞向苍茫大地。</p></div>
+        </article>
+        <footer>
+            <div class="buttons">
+                <button class="confirm">确定</button>
+                <button class="cancel">取消</button>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="nc-dialog-container" id="model3">
+    <div class="shade"></div>
+    <div class="nc-Dialog dialog-Confirm">
+        <header>
+            <span>操作名称</span>
+            <span class="cancel">×</span>
+        </header>
+        <article>
+            <div class="description">
+                <div class="gradetitle">
+                    <span class="icon back-blue">!</span>
+                    <span class="title">我是副标题</span>
+                </div>
+                <div class="btext"><p>新特性之一是可以使 HTML 事件触发浏览器中的行为，比方说当用户点击某个元素时启动一段 JavaScript</p></div>
+            </div>
+        </article>
+        <footer>
+            <div class="buttons">
+                <button class="confirm">确定</button>
+                <button class="cancel">取消</button>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="nc-dialog-container" id="model4">
+    <div class="shade"></div>
+    <div class="nc-Dialog dialog-Confirm">
+        <header>
+            <span>操作名称</span>
+            <span class="cancel">×</span>
+        </header>
+        <article>
+            <div class="description">
+                <div class="gradetitle">
+                    <span class="icon back-red">!</span>
+                    <span class="title">我是副标题</span>
+                </div>
+                <div class="btext"><p>新特性之一是可以使 HTML 事件触发浏览器中的行为，比方说当用户点击某个元素时启动一段 JavaScript</p></div>
+            </div>
+        </article>
+        <footer>
+            <div class="buttons">
+                <button class="delete">删除</button>
+                <button class="cancel">取消</button>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $("#model1").bootModel();
+        $("#model2").bootModel();
+        $("#model3").bootModel();
+        $("#model4").bootModel();
+
+        $("button:contains('标准尺寸')").click(function() {
+            $("#model1").bootModel('show');
+        });
+        $("button:contains('大尺寸')").click(function() {
+            $("#model2").bootModel('show');
+        });
+        $("button:contains('操作确认')").click(function() {
+            $("#model3").bootModel('show');
+        });
+        $("button:contains('删除')").click(function() {
+            $("#model4").bootModel('show');
+        });
+    });
+</script>
+
+<h3 class="font-weight-bold hh3">- 参数</h3>
+<p>无</p>
+<h3 class="font-weight-bold hh3">- 方法</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>方法</th>
+        <th>说明</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>bootModel(Option)</td>
+        <td>接收一个可选的对象，初始化插件</td>
+        <td>Object</td>
+    </tr>
+    <tr>
+        <td>bootModel('show')</td>
+        <td>显示模态框</td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td>bootModel('hide')</td>
+        <td>隐藏模态框</td>
+        <td>String</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 事件</h3>
+<p>无</p>
