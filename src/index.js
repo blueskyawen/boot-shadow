@@ -12,5 +12,6 @@ require('./boot-model/bootmodel');
 require('./boot-tab/boottab');
 require('./boot-scrollspy/bootscrollspy');
 require('./boot-affix/bootaffix');
+require('./boot-dropdown/bootdropdown');
 
 
