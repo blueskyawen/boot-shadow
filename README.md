@@ -8,7 +8,7 @@
 - 引用脚本后直接使用
 - 常用插件，使用方式多样
 
-# 文档
+# 文档-Demo
 
 [http://blueskyawen.com/boot-shadow/](http://blueskyawen.com/boot-shadow/)
 
