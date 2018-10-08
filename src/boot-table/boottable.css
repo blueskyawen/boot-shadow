@@ -75,3 +75,37 @@ table tr#noData {
     height:30px;
     cursor:pointer;
 }
+
+ul.nc-pagination {
+    display: inline-block;
+    padding: 10px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 2px);
+}
+ul.nc-pagination li {
+    display: inline;
+}
+ul.nc-pagination li a {
+    color: #262626;
+    float: left;
+    height:24px;
+    width:24px;
+    text-align:center;
+    line-height:24px;
+    text-decoration: none;
+    border-radius:4px;
+    transition: background-color 100ms;
+    font-size: 12px;
+}
+ul.nc-pagination li.active a {
+    background-color: #1a75ff;
+    color: white;
+}
+ul.nc-pagination li.active a:hover {
+    background-color: #005ce6;
+}
+ul.nc-pagination li:not(.active) a:hover {
+    background-color: #ddd;
+}

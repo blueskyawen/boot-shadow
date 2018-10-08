@@ -67,6 +67,9 @@ import './boottable.css';
         this.$element.prepend($thead);
         this.$element.prepend("<caption>"+this.options.caption+"</caption>");
         this.$element.prepend("<div class='search'><label>搜索</label><input id='search' type='text' placeholder='请输入搜索'/></div>");
+        this.$element.append("<ul class='nc-pagination'><li><a href='javascript:void(0)'>❮</a></li><li class='active'><a href='javascript:void(0)'>1</a></li>" +
+            "<li><a href='javascript:void(0)'>2</a></li><li><a href='javascript:void(0)'>3</a></li><li><a href='javascript:void(0)'>4</a></li>" +
+            "<li><a href='javascript:void(0)'>5</a></li><li><a href='javascript:void(0)'>6</a></li><li><a href='javascript:void(0)'>❯</a></li></ul>");
         this.$element.find("tbody > tr:odd").addClass(this.options.option.odd);
         this.$element.find("tbody > tr:even").addClass(this.options.option.even);
     };
