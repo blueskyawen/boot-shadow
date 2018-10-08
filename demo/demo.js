@@ -26,4 +26,6 @@ $(function() {
     $("#affix").load("./demo/demo-affix.html");
     $("#dropdown").load("./demo/demo-dropdown.html");
     $("#table").load("./demo/demo-table.html");
+    $("#backtop").load("./demo/demo-backTop.html");
+    $("#steps").load("./demo/demo-steps.html");
 });

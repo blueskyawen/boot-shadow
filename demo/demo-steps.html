@@ -1,0 +1,328 @@
+<h1>Steps步骤条</h1>
+<p class="lead">引导用户按照流程完成任务的导航条</p>
+<h3 class="font-weight-bold hh3">- 何时使用</h3>
+<ul>
+    <li>当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务</li>
+</ul>
+<h3 class="font-weight-bold hh3">- 示例</h3>
+<h5 class="hh5">步骤条-下划线样式</h5>
+<div class="card">
+    <div class="card-body">
+        <div class="nc-stepcontainer" id="steps01">
+            <div class="nc-steps">
+                <div class="nc-step" data-target="basic">基本信息</div>
+                <div class="nc-step" data-target="addition">附加信息</div>
+                <div class="nc-step" data-target="advance">高级设置</div>
+                <div class="nc-step" data-target="sucess">构建成功</div>
+                <div class="nc-step" data-target="confirm">最终结束</div>
+            </div>
+            <div data-id="basic" class="nc-step_content">
+                <div class="step_demo_content">
+                    基本信息
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button  type="button" class="btn btn-default">下一步</button>
+                </div>
+            </div>
+            <div data-id="addition" class="nc-step_content">
+                <div class="step_demo_content">
+                    附加信息
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-default">下一步</button>
+                </div>
+            </div>
+            <div data-id="advance" class="nc-step_content">
+                <div class="step_demo_content">
+                    高级设置
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-default">下一步</button>
+                </div>
+            </div>
+            <div data-id="sucess" class="nc-step_content">
+                <div class="step_demo_content">
+                    构建成功
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-default">下一步</button>
+                </div>
+            </div>
+            <div data-id="confirm" class="nc-step_content">
+                <div class="step_demo_content">
+                    最终结束
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-primary">完成</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo1">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo1" class="collapse">
+    <textarea style="height:500px;">
+    <div class="nc-stepcontainer" id="steps01">
+      <div class="nc-steps">
+        <div class="nc-step" data-target="basic">基本信息</div>
+        <div class="nc-step" data-target="addition">附加信息</div>
+        <div class="nc-step" data-target="advance">高级设置</div>
+        <div class="nc-step" data-target="sucess">构建成功</div>
+        <div class="nc-step" data-target="confirm">最终结束</div>
+      </div>
+      <div data-id="basic" class="nc-step_content">
+        <div class="step_demo_content">
+            基本信息
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-default">下一步</button>
+        </div>
+      </div>
+      <div data-id="addition" class="nc-step_content">
+        <div class="step_demo_content">
+            附加信息
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-default">下一步</button>
+        </div>
+      </div>
+      <div data-id="advance" class="nc-step_content">
+        <div class="step_demo_content">
+            高级设置
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-default">下一步</button>
+        </div>
+      </div>
+      <div data-id="sucess" class="nc-step_content">
+        <div class="step_demo_content">
+            构建成功
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-default">下一步</button>
+        </div>
+      </div>
+      <div data-id="confirm" class="nc-step_content">
+        <div class="step_demo_content">
+            最终结束
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-primary">完成</button>
+        </div>
+      </div>
+    </div>
+
+    $(function() {
+      $("#steps01").bootSteps({type: "bottom-lines"});
+      $("#steps01").find(".buttons button:contains('上一步')").click(function() {
+       $("#steps01").bootSteps('prev');
+      });
+      $("#steps01").find(".buttons button:contains('下一步')").click(function() {
+        $("#steps01").bootSteps('next');
+      });
+      $("#steps01").find(".buttons button:contains('完成')").click(function() {
+        alert("最终结束");
+      });
+    });
+    </textarea>
+</div>
+<h5 class="hh5">步骤条-中划线样式</h5>
+<div class="card">
+    <div class="card-body">
+        <div class="nc-stepcontainer" id="steps02">
+            <div class="nc-steps">
+                <div class="nc-step active"  data-target="basic">基本信息</div>
+                <div class="nc-step" data-target="addition">附加信息</div>
+                <div class="nc-step" data-target="advance">高级设置</div>
+                <div class="nc-step" data-target="sucess">构建成功</div>
+                <div class="nc-step" data-target="confirm">最终结束</div>
+            </div>
+            <div data-id="basic" class="nc-step_content">
+                <div class="step_demo_content">
+                    基本信息
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-default">下一步</button>
+                </div>
+            </div>
+            <div data-id="addition" class="nc-step_content">
+                <div class="step_demo_content">
+                    附加信息
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-default">下一步</button>
+                </div>
+            </div>
+            <div data-id="advance" class="nc-step_content">
+                <div class="step_demo_content">
+                    高级设置
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-default">下一步</button>
+                </div>
+            </div>
+            <div data-id="sucess" class="nc-step_content">
+                <div class="step_demo_content">
+                    构建成功
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-default">下一步</button>
+                </div>
+            </div>
+            <div data-id="confirm" class="nc-step_content">
+                <div class="step_demo_content">
+                    最终结束
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default">上一步</button>
+                    <button type="button" class="btn btn-primary">完成</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <a href="#"class="p-2 text-info" title="Code" data-toggle="collapse" data-target="#demo2">
+            &lt;/&gt;
+        </a>
+    </div>
+</div>
+<div id="demo2" class="collapse">
+    <textarea style="height:500px;">
+    <div class="nc-stepcontainer" id="steps02">
+      <div class="nc-steps">
+        <div class="nc-step active"  data-target="basic">基本信息</div>
+        <div class="nc-step" data-target="addition">附加信息</div>
+        <div class="nc-step" data-target="advance">高级设置</div>
+        <div class="nc-step" data-target="sucess">构建成功</div>
+        <div class="nc-step" data-target="confirm">最终结束</div>
+      </div>
+      <div data-id="basic" class="nc-step_content">
+        <div class="step_demo_content">
+            基本信息
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-default">下一步</button>
+        </div>
+      </div>
+      <div data-id="addition" class="nc-step_content">
+        <div class="step_demo_content">
+            附加信息
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-default">下一步</button>
+        </div>
+      </div>
+      <div data-id="advance" class="nc-step_content">
+        <div class="step_demo_content">
+            高级设置
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-default">下一步</button>
+        </div>
+      </div>
+      <div data-id="sucess" class="nc-step_content">
+        <div class="step_demo_content">
+            构建成功
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-default">下一步</button>
+        </div>
+      </div>
+      <div data-id="confirm" class="nc-step_content">
+        <div class="step_demo_content">
+            最终结束
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-default">上一步</button>
+          <button type="button" class="btn btn-primary">完成</button>
+        </div>
+      </div>
+    </div>
+
+    $(function() {
+      $("#steps02").bootSteps({type: "middle-lines"});
+      $("#steps02").find(".buttons button:contains('上一步')").click(function() {
+       $("#steps02").bootSteps('prev');
+      });
+      $("#steps02").find(".buttons button:contains('下一步')").click(function() {
+        $("#steps02").bootSteps('next');
+      });
+      $("#steps02").find(".buttons button:contains('完成')").click(function() {
+        alert("最终结束");
+      });
+    });
+    </textarea>
+</div>
+
+<h3 class="font-weight-bold hh3">- 参数</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>type</td>
+        <td>步骤条类型;bottom-lines/middle-lines</td>
+        <td>String</td>
+        <td>bottom-lines</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 方法</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>方法</th>
+        <th>说明</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>bootSteps(Option)</td>
+        <td>接收一个可选的对象，初始化插件</td>
+        <td>Object</td>
+    </tr>
+    <tr>
+        <td>bootSteps('prev')</td>
+        <td>上一步</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>bootSteps('next')</td>
+        <td>下一步</td>
+        <td>-</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="font-weight-bold hh3">- 事件</h3>
+<p>无</p>
+
+<script src="./demo/demo-steps.js"></script>

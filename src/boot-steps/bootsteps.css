@@ -1,0 +1,96 @@
+.nc-stepcontainer{
+    width:90%;
+    margin:auto;
+}
+.nc-steps {
+    width:100%;
+    display:flex;
+    flex-grow: 1;
+    margin-top:30px;
+}
+.nc-steps-bottom-lines{
+    border-bottom:solid 3px  #bfbfbf;
+}
+.nc-steps-bottom-lines .nc-step {
+    display:inline-block;
+    width:20%;
+    word-break:break-all;
+    font-size:12px;
+    padding-bottom:15px;
+}
+.nc-steps .nc-step:before{
+    display:inline-block;
+    height:20px;
+    width:20px;
+    border:solid 1px #a6a6a6;
+    border-radius:50%;
+    margin-right:8px;
+    line-height:20px;
+    background:#a6a6a6;
+    color:#fff;
+    font-size:14px;
+    text-align:center;
+}
+.nc-steps .nc-step.actived:before{
+    content:"✔";
+    background:#fff;
+    color:#1a75ff;
+    border-color:#1a75ff;
+}
+.nc-steps .nc-step.active:before{
+    background:#1a75ff;
+    border-color:#1a75ff;
+}
+.nc-steps-bottom-lines .nc-step.active{
+    border-bottom:solid #1a75ff 3px;
+    color:#1a75ff;
+    margin-bottom:-3px;
+}
+.nc-steps-middle-lines .nc-step {
+    display:inline-block;
+    width:20%;
+    word-break:break-all;
+    font-size:12px;
+    position:relative;
+    padding-bottom:15px;
+    text-align:center;
+}
+.nc-steps-middle-lines .nc-step:before{
+    position:absolute;
+    left:45%;
+    bottom:-10px;
+}
+.nc-steps-middle-lines .nc-step:not(:last-child):after{
+    content:"";
+    display:inline-block;
+    height:2px;
+    width:calc(100% - 20px);
+    background:#a6a6a6;
+    position:absolute;
+    bottom:0%;
+    left:calc(45% + 22px);
+}
+.nc-steps-middle-lines .nc-step.actived:before{
+    content:"✔";
+    background:#fff;
+    color:#1a75ff;
+    border-color:#1a75ff;
+}
+.nc-steps-middle-lines .nc-step.actived:after{
+    background:#1a75ff;
+}
+.nc-steps-middle-lines .nc-step.active:before{
+    background:#1a75ff;
+    border-color:#1a75ff;
+}
+.nc-steps-middle-lines .nc-step.active{
+    color:#1a75ff;
+}
+.step_demo_content{
+    border:solid 0px;
+    clear:both;
+    height:120px;
+    padding:20px;
+    margin:auto;
+    width:100%;
+}
