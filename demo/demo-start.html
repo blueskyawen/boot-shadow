@@ -13,9 +13,33 @@
       npm install boot-shadow --save-dev
   </pre>
 <h3 class="font-weight-bold">使用方式</h3>
-<p>直接引用脚本和CSS样式文件，根据示例使用即可</p>
+<h5>直接引用脚本和CSS样式文件，根据示例使用即可</h5>
 <pre>
     &lt;script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;
     &lt;link rel="stylesheet" href="node_modules/boot-shadow/dist/bootshadow.min.css"&gt;
     &lt;script src="node_modules/boot-shadow/dist/bootshadow.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>在Angular-cli中使用</h5>
+<pre>
+    npm install jquery --save
+    npm install @types/jquery --save
+    npm install boot-shadow --save-dev
+</pre>
+<p>更新.angular-cli.json配置</p>
+<pre>
+    "styles": [
+        "../node_modules/boot-shadow/dist/bootshadow.min.css"
+    ],
+    "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/boot-shadow/dist/bootshadow.min.js"
+    ],
+</pre>
+<p>在对应component中的ngOnInit()使用</p>
+<pre>
+    declare var $: any;
+
+    ngOnInit() {
+        $("#switch2").bootSwitch();
+    }
 </pre>
