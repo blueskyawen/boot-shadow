@@ -23,9 +23,32 @@
 
 # 使用方式
 
-直接引用脚本和CSS样式文件，根据示例使用即可
+### 直接引用脚本和CSS样式文件
 
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="node_modules/boot-shadow/dist/bootshadow.min.css">
     <script src="node_modules/boot-shadow/dist/bootshadow.min.js"></script>
+    
+### 在Angular-cli中使用
 
+    npm install jquery --save
+    npm install @types/jquery --save
+    npm install boot-shadow --save-dev
+
+更新.angular-cli.json配置
+
+    "styles": [
+        "../node_modules/boot-shadow/dist/bootshadow.min.css"
+    ],
+    "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/boot-shadow/dist/bootshadow.min.js"
+    ],
+    
+在对应component中的ngOnInit()使用  
+
+    declare var $: any;
+
+    ngOnInit() {
+        $("#switch2").bootSwitch();
+    }
