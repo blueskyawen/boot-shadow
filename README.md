@@ -18,7 +18,7 @@
 
 # 下载方式
 
-    npm install boot-shadow
+    npm install boot-shadow --save-dev
   
 
 # 使用方式
