@@ -25,6 +25,7 @@ body {
 }
 .container-fluid.content-body {
     padding:15px 50px;
+    box-sizing: border-box;
 }
 
 textarea {
