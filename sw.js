@@ -11,11 +11,11 @@ var cacheList=[
     'demo/demo-scrollspy-03.html',
     'demo/demo-table-03.html',
     'images/turkey_48px.png',
-    'images/casel01.png',
-    'images/casel02.png',
-    'images/casel03.png',
-    'images/casel04.png',
-    'images/casel05.png'
+    'images/casel01.jpg',
+    'images/casel02.jpg',
+    'images/casel03.jpg',
+    'images/casel04.jpg',
+    'images/casel05.jpg'
 ];
 self.addEventListener('install',function(e) {
     e.waitUntil(
