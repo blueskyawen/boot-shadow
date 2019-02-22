@@ -1,13 +1,13 @@
 /**
  * Created by root on 2/22/19.
  */
-var cacheStorageKey = 'boot-shadow-1';
+var cacheStorageKey = 'boot-shadow-2';
 var cacheList=[
     '/',
     'index.html',
     'style.css',
     'demo/demo.js',
-    'demo/turkey_48px_1218408_easyicon.net.ico'
+    'demo/turkey_48px.ico'
 ];
 self.addEventListener('install',function(e) {
     e.waitUntil(
