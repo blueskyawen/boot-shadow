@@ -4,11 +4,11 @@
 $(function() {
     var count = 0;
     var optionss = [
-        {name: 'fuzhi',url: '../images/casel01.jpg'},
-        {name: 'qingshuisi',url: '../images/casel02.jpg'},
-        {name: 'xiaodao',url: '../images/casel03.jpg'},
-        {name: 'xiaodao2',url: '../images/casel04.jpg'},
-        {name: 'xiaodao3',url: '../images/casel05.jpg'}
+        {name: 'fuzhi',url: 'images/casel01.jpg'},
+        {name: 'qingshuisi',url: 'images/casel02.jpg'},
+        {name: 'xiaodao',url: 'images/casel03.jpg'},
+        {name: 'xiaodao2',url: 'images/casel04.jpg'},
+        {name: 'xiaodao3',url: 'images/casel05.jpg'}
     ];
     var optionss2 = JSON.parse(JSON.stringify(optionss));
     $("#carousel-fade").bootCarousel({options: optionss,type: 'fade'});
