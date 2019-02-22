@@ -1,7 +1,7 @@
 /**
  * Created by root on 2/22/19.
  */
-var cacheStorageKey = 'boot-shadow-2';
+var cacheStorageKey = 'boot-shadow-3';
 var cacheList=[
     '/',
     'index.html',
