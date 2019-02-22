@@ -28,4 +28,14 @@ $(function() {
     $("#table").load("./demo/demo-table.html");
     $("#backtop").load("./demo/demo-backTop.html");
     $("#steps").load("./demo/demo-steps.html");
+
+    // 检测浏览器是否支持SW
+    if(navigator.serviceWorker != null){
+        navigator.serviceWorker.register('../sw.js')
+            .then(function(registartion){
+                console.log('支持sw:',registartion.scope)
+            }).catch(function(err) {
+                console.log('不支持sw:',err)
+            })
+    }
 });

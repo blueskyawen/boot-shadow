@@ -1,0 +1,15 @@
+{
+  "name": "bootShadow",
+  "short_name": "bsw",
+  "lang": "zh-cn",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "demo/turkey_48px_1218408_easyicon.net.ico",
+      "sizes": "36x36",
+      "type": "image/png"
+    }
+  ]
+}
