@@ -7,7 +7,15 @@ var cacheList=[
     'index.html',
     'style.css',
     'demo/demo.js',
-    'demo/turkey_48px.ico'
+    'demo/demo-affix-03.html',
+    'demo/demo-scrollspy-03.html',
+    'demo/demo-table-03.html',
+    'images/turkey_48px.png',
+    'images/casel01.png',
+    'images/casel02.png',
+    'images/casel03.png',
+    'images/casel04.png',
+    'images/casel05.png'
 ];
 self.addEventListener('install',function(e) {
     e.waitUntil(
