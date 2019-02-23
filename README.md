@@ -12,6 +12,8 @@
 
 [http://blueskyawen.com/boot-shadow/](http://blueskyawen.com/boot-shadow/)
 
+[https://blueskyawen.com/boot-shadow/](https://blueskyawen.com/boot-shadow/) (支持PWA)
+
 # 支持环境
 
 现代浏览器和 IE9 及以上（需要 polyfills）
