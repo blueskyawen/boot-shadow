@@ -16,6 +16,7 @@
     font-size:14px;
     line-height:36px;
     color:#666;
+    max-width: 100%;
 }
 .nc-mutil-select-dropdown:after{
     content:"";
@@ -32,15 +33,14 @@
 }
 .nc-mutil-select-dropdown .selectss{
     display:flex;
-//justify-content:flex-start;
     align-items:center;
     flex-wrap:wrap;
     flex-basis:auto;
-    width:380px;
+    width: calc(100% - 40px);
     min-width:180px;
     border:solid 0px red;
     border-radius:4px;
-//position:absolute;
+    max-width: 100%;
 }
 .nc-mutil-select-dropdown .selectss .selectedTitle {
     color:#000;
@@ -50,7 +50,6 @@
 }
 .nc-mutil-select-dropdown .selectss .option{
     display:inline-block;
-    height:16px;
     line-height:16px;
     font-size:12px;
     border:solid 1px #999;
@@ -61,10 +60,12 @@
     background:#d9d9d9;
     color:#1a1a1a;
     position:relative;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 .nc-mutil-select-dropdown .selectss .option .optext{
     display:inline-block;
-    max-width:330px;
+    max-width:100%;
     min-width:130px;
     white-space:nowrap;
     overflow: hidden;

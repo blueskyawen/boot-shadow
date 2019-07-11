@@ -5,6 +5,7 @@
     position:relative;
     width:420px;
     min-width:100px;
+    max-width: 100%;
 }
 .nc-select-dropdown.disable{
     cursor:not-allowed;

@@ -3,17 +3,18 @@
     justify-content:center;
     height:240px;
     min-height:100px;
-//border:solid 1px;
-    width:auto;
+    width:540px;
     padding:0;
+    max-width: 100%;
 }
 .nc-transferContainer .optionsContain{
     display:flex;
     flex-direction:column;
     height:100%;
-    min-width:200px;
+    min-width:100px;
     border:solid 1px #999;
     border-radius:4px;
+    width: calc(50% - 30px);
 }
 .nc-transferContainer .optionsContain .header{
     display:flex;

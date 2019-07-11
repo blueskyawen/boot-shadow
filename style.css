@@ -43,3 +43,9 @@ textarea {
     margin-top: 20px;
     margin-bottom:10px;
 }
+
+@media (max-width: 576px) {
+    .container-fluid.content-body {
+        padding:15px;
+    }
+}
