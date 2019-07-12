@@ -26,7 +26,7 @@
     background:#fff;
     border:solid 1px #999;
     border-radius:8px;
-    width:50%;
+    width:60%;
     min-height:120px;
     transform: translateX(-50%);
     box-shadow:2px 2px 2px #a3a375;
@@ -178,4 +178,10 @@ article form {
 .icon-red{
     border:solid 1px #ff1a1a;
     color:#ff1a1a;
+}
+
+@media (max-width: 576px) {
+    .nc-dialog-container .nc-Dialog {
+        width: 80%
+    }
 }

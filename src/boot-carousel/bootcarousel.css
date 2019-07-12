@@ -101,3 +101,15 @@
     max-height:100%;
     max-width:100%;
 }
+
+@media (max-width: 486px) {
+    .nc-carousel {
+        max-height: 240px;
+    }
+}
+@media (max-width: 576px) {
+    .nc-carousel {
+        max-height: 320px;
+    }
+}
+

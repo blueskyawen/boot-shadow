@@ -11,6 +11,7 @@
     justify-content:center;
     display:none;
     color:#fff;
+    max-width: 100%;
 }
 .nc-warn{
     min-height:45px;
@@ -24,6 +25,7 @@
     line-height:45px;
     display:none;
     color:#fff;
+    max-width: 100%;
 }
 .nc-warn .msg{
     height:100%;
@@ -60,6 +62,7 @@
     line-height:45px;
     display:none;
     color:#fff;
+    max-width: 100%;
 }
 .nc-error .msg{
     height:100%;

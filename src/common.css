@@ -4,6 +4,7 @@
 
 button {
     cursor:pointer;
+    margin: 5px;
 }
 button.normal{
     height:42px;
@@ -55,9 +56,10 @@ button.delete:hover{
     align-items:center;
     margin-bottom:20px;
     display:flex;
+    max-width: 100%;
 }
 .form-group label{
-    width:120px;
+    width:60px;
     text-align:center;
     height:100%;
     font-size:12px;
@@ -73,10 +75,11 @@ button.delete:hover{
     height:100%;
     font-size:14px;
     display:inline-block;
+    width: calc(100% - 60px);
 }
 .form-group .group-right  input{
     height:100%;
-    width:360px;
+    width:100%;
     font-size:14px;
     border:solid 1px  #999999;
     border-radius:4px;

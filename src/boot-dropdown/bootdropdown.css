@@ -137,3 +137,6 @@
     display:inline-block;
     color: #b3b3b3;
 }
+.nc-dropdown button {
+    margin: 0;
+}
