@@ -380,6 +380,7 @@ div.mavcontent{
     justify-content:center;
     display:none;
     color:#fff;
+    max-width: 100%;
 }
 .nc-warn{
     min-height:45px;
@@ -393,6 +394,7 @@ div.mavcontent{
     line-height:45px;
     display:none;
     color:#fff;
+    max-width: 100%;
 }
 .nc-warn .msg{
     height:100%;
@@ -429,6 +431,7 @@ div.mavcontent{
     line-height:45px;
     display:none;
     color:#fff;
+    max-width: 100%;
 }
 .nc-error .msg{
     height:100%;
@@ -453,7 +456,8 @@ div.mavcontent{
 .nc-error .oper-cancel span:hover{
     background:#800000;
     cursor:pointer;
-}.nc-collapseset {
+}
+.nc-collapseset {
     width:60%;
     min-width:200px;
     min-height:100px;
@@ -619,7 +623,20 @@ div.mavcontent{
     width:100%;
     max-height:100%;
     max-width:100%;
-}.nc-dialog-container {
+}
+
+@media (max-width: 486px) {
+    .nc-carousel {
+        max-height: 240px;
+    }
+}
+@media (max-width: 576px) {
+    .nc-carousel {
+        max-height: 320px;
+    }
+}
+
+.nc-dialog-container {
     position: fixed;
     top:0;
     left:0;
@@ -647,7 +664,7 @@ div.mavcontent{
     background:#fff;
     border:solid 1px #999;
     border-radius:8px;
-    width:50%;
+    width:60%;
     min-height:120px;
     transform: translateX(-50%);
     box-shadow:2px 2px 2px #a3a375;
@@ -799,6 +816,12 @@ article form {
 .icon-red{
     border:solid 1px #ff1a1a;
     color:#ff1a1a;
+}
+
+@media (max-width: 576px) {
+    .nc-dialog-container .nc-Dialog {
+        width: 80%
+    }
 }
 .nc-nav-tabs {
     display: -webkit-flex;
@@ -1312,7 +1335,11 @@ article form {
     padding:10px 10px;
     display:inline-block;
     color: #b3b3b3;
-}table {
+}
+.nc-dropdown button {
+    margin: 0;
+}
+table {
     border-collapse:collapse;
     width: 90%;
     position:relative;
@@ -1617,6 +1644,7 @@ ul.nc-pagination li:not(.active) a:hover {
 
 button {
     cursor:pointer;
+    margin: 5px;
 }
 button.normal{
     height:42px;
@@ -1668,9 +1696,10 @@ button.delete:hover{
     align-items:center;
     margin-bottom:20px;
     display:flex;
+    max-width: 100%;
 }
 .form-group label{
-    width:120px;
+    width:60px;
     text-align:center;
     height:100%;
     font-size:12px;
@@ -1686,10 +1715,11 @@ button.delete:hover{
     height:100%;
     font-size:14px;
     display:inline-block;
+    width: calc(100% - 60px);
 }
 .form-group .group-right  input{
     height:100%;
-    width:360px;
+    width:100%;
     font-size:14px;
     border:solid 1px  #999999;
     border-radius:4px;
@@ -1697,7 +1727,8 @@ button.delete:hover{
 }
 .form-group .group-right input:focus{
     border-color:#0039e6;
-}.nc-select-dropdown{
+}
+.nc-select-dropdown{
     margin:20px;
     position:relative;
     width:420px;
