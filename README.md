@@ -10,9 +10,7 @@
 
 # 文档-Demo
 
-[http://blueskyawen.com/boot-shadow/](http://blueskyawen.com/boot-shadow/)
-
-[https://blueskyawen.com/boot-shadow/](https://blueskyawen.com/boot-shadow/) (支持PWA)
+[boot-shadow](https://zeithink.xyz/boot-shadow/) (支持PWA)
 
 # 支持环境
 
